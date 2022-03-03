@@ -5,7 +5,7 @@ import pandas as pd
 #memory_size=(1, 2, 4, 6, 8, 10, 11, 12, 16, 24)
 
 nvidia=pd.read_csv("Nvidia Graphics Cards.csv")
-#nvidia=nvidia.reset_index(drop=True, inplace=True)
+nvidia.reset_index(drop=True, inplace=True)
 nvidia=nvidia.sort_values('Released Year')
 
 st.write("""
@@ -19,7 +19,7 @@ st.text('         It simple to use, just move the sliders in the sidebar and the
 st.text('Database Source: https://www.techpowerup.com/gpu-specs/')
 ##########################################################################################    
 
-st.sidebar.write('Move the sliders to filter the list')
+st.sidebar.write('Move the sliders to filter the list:')
 
 memory = st.sidebar.slider('Select Lowest Memory Size (in Gb):', 1,24,1)
     
@@ -47,9 +47,6 @@ if len(nvidia.index)==0:
     st.subheader('No Graphics Cards Found')
 else:
     st.table(nvidia)
+#########################################################################################
 
-
-
-
-
-
+nvidia.plot.bar(x='Product Name', y='Memory (Gb)', rot=0)
