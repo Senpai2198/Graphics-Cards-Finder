@@ -5,7 +5,7 @@ import pandas as pd
 #memory_size=(1, 2, 4, 6, 8, 10, 11, 12, 16, 24)
 
 nvidia=pd.read_csv("Nvidia Graphics Cards.csv")
-nvidia=nvidia.reset_index(drop=True, inplace=True)
+#nvidia=nvidia.reset_index(drop=True, inplace=True)
 nvidia=nvidia.sort_values('Released Year')
 
 st.write("""
