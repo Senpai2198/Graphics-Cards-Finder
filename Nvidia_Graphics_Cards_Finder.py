@@ -19,7 +19,7 @@ st.text('         It simple to use, just move the sliders in the sidebar and the
 st.text('Database Source: https://www.techpowerup.com/gpu-specs/')
 ##########################################################################################    
 
-st.sidebar.text('Move the sliders to filter the list')
+st.sidebar.write('Move the sliders to filter the list')
 
 memory = st.sidebar.slider('Select Lowest Memory Size (in Gb):', 1,24,1)
     
