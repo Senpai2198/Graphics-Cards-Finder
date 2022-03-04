@@ -1,4 +1,3 @@
-```python
 import streamlit as st
 import pandas as pd
 ##########################################################################################
@@ -94,4 +93,3 @@ from adding an X-Ray view to adding cartoony outlines to rendering output.
 '''.strip()
 
 ###########################################################################################
-```
