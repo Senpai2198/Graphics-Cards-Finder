@@ -21,32 +21,6 @@ st.text('Note: Only popular graphics cards from year 2010 are listed in this tab
 
 ##########################################################################################    
 
-help_year = '''
-Sort GPUs'released years in ascending order.
-'''.strip()
-
-help_memory = '''
-GPU VRAM holds multiple data such as vertex (geometry), terrain, mesh , texture of the games.
-If there isn't enough space in GPU memory, modern GPUs will use VRAM (a dedicated memory portion of CPU RAM).
-'''.strip()
-
-help_gpu = '''
-Also known as engine clock, GPU clock speed indicates how fast the cores of a graphics processing unit (GPU) are.
-The function of these cores is to render graphics; therefore, the higher the GPU clock speed, the faster the processing.
-'''.strip()
-
-help_memory_c = '''
-The memory clock is the speed of the VRAM on the GPU.
-'''.strip()
-
-help_shaders = '''
-A shader is a piece of code that is executed on the Graphics Processing Unit (GPU), usually found on a graphics card, 
-to manipulate an image before it is drawn to the screen. Shaders allow for various kinds of rendering effect, ranging 
-from adding an X-Ray view to adding cartoony outlines to rendering output.
-'''.strip()
-
-
-###########################################################################################
 st.sidebar.write('Move the sliders to filter the list:')
 
 type_GPC = st.sidebar.selectbox('Select NVIDIA and/or AMD:', NvidiaorAMD, 0)
@@ -86,8 +60,34 @@ GPC = GPC[GPC['Shaders'] >= shaders]
 if len(GPC.index)==0:
     st.subheader('No Graphics Cards Found')
 else:
-    st.table(GPC)
+    st.datafram(GPC)
 
 st.markdown('Database Source ---> [TechPowerUp: GPU Specs Database](%s)' % database_url)
 
 #########################################################################################
+
+help_year = '''
+Sort GPUs'released years in ascending order.
+'''.strip()
+
+help_memory = '''
+GPU VRAM holds multiple data such as vertex (geometry), terrain, mesh , texture of the games.
+If there isn't enough space in GPU memory, modern GPUs will use VRAM (a dedicated memory portion of CPU RAM).
+'''.strip()
+
+help_gpu = '''
+Also known as engine clock, GPU clock speed indicates how fast the cores of a graphics processing unit (GPU) are.
+The function of these cores is to render graphics; therefore, the higher the GPU clock speed, the faster the processing.
+'''.strip()
+
+help_memory_c = '''
+The memory clock is the speed of the VRAM on the GPU.
+'''.strip()
+
+help_shaders = '''
+A shader is a piece of code that is executed on the Graphics Processing Unit (GPU), usually found on a graphics card, 
+to manipulate an image before it is drawn to the screen. Shaders allow for various kinds of rendering effect, ranging 
+from adding an X-Ray view to adding cartoony outlines to rendering output.
+'''.strip()
+
+###########################################################################################
