@@ -49,4 +49,4 @@ else:
     st.table(nvidia)
 #########################################################################################
 
-st.bar_chart(nvidia) #,x='Product Name', y='Memory (Gb)', rot=0)
+st.bar_chart(nvidia, width='Product Name', height='Memory (Gb)', rot=0)
