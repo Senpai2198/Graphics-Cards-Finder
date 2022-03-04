@@ -64,6 +64,8 @@ else:
 
 st.markdown('Database Source ---> [TechPowerUp: GPU Specs Database](%s)' % database_url)
 
+st.image("https://www.gpumag.com/wp-content/uploads/2020/05/computer-graphics-card.jpg")
+
 #########################################################################################
 
 help_year = '''
