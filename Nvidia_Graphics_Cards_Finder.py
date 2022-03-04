@@ -38,9 +38,9 @@ shaders=st.sidebar.slider('Select Lowest Shaders:', 192,10496,192)
 #########################################################################################
 
 if type_GPC=='NVIDIA':
-         nvidia = nvidia[nvidia['Product Name'] != 'GeForce GTX']
+         nvidia = nvidia[nvidia['Product Name'].str.contains('GeForce GTX')]
 else:
-         nvidia = nvidia[nvidia['Product Name'] != 'Radeon RX']
+         nvidia = nvidia[nvidia['Product Name'].str.contains('Radeon RX')]
 
 nvidia = nvidia[nvidia['Memory (Gb)'] >= memory] 
 
