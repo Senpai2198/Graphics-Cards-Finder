@@ -40,7 +40,7 @@ if type_GPC=='NVIDIA':
 elif type_GPC=='AMD':
          GPC = GPC[GPC['Product Name'].str.contains('Radeon RX')]
 else:
-         GPC = GPC=GPC
+         GPC = GPC
 
 GPC = GPC[GPC['Memory (Gb)'] >= memory] 
 
