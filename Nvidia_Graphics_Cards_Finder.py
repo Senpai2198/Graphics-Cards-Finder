@@ -57,7 +57,7 @@ GPC = GPC[GPC['Shaders'] >= shaders]
 
 ########################################################################################
 
-for i in range(101):
+for i in range(0.005):
          st.progress(i)
          if len(GPC.index)==0:
                   st.error('No Graphics Cards Found')
