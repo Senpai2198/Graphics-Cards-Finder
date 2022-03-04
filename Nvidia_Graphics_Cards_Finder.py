@@ -3,7 +3,7 @@ import pandas as pd
 ##########################################################################################
 
 GPC=pd.read_csv("Nvidia Graphics Cards.csv")
-GPC.reset_index(drop=True, inplace=True)
+GPC = GPC.reset_index(drop=True, inplace=True)
 #GPC=GPC.sort_values('Released Year')
 NvidiaorAMD=['Both NVIDIA and AMD','NVIDIA','AMD']
 database_url="https://www.techpowerup.com/gpu-specs/"
@@ -36,19 +36,19 @@ shaders=st.sidebar.slider('Select Lowest Shaders:', 192,10496,192)
 #########################################################################################
 
 if type_GPC=='NVIDIA':
-         GPC[GPC['Product Name'].str.contains('GeForce GTX')]
+         GPC = GPC[GPC['Product Name'].str.contains('GeForce GTX')]
 elif type_GPC=='AMD':
-         GPC[GPC['Product Name'].str.contains('Radeon RX')]
+         GPC = GPC[GPC['Product Name'].str.contains('Radeon RX')]
 else:
-         GPC=GPC
+         GPC = GPC=GPC
 
-GPC[GPC['Memory (Gb)'] >= memory] 
+GPC = GPC[GPC['Memory (Gb)'] >= memory] 
 
-GPC[GPC['GPU clock (MHz)'] >= gpu] 
+GPC = GPC[GPC['GPU clock (MHz)'] >= gpu] 
 
-GPC[GPC['Memory clock (MHz)'] >= memory_c] 
+GPC = GPC[GPC['Memory clock (MHz)'] >= memory_c] 
 
-GPC[GPC['Shaders'] >= shaders] 
+GPC = GPC[GPC['Shaders'] >= shaders] 
 
 
 ########################################################################################
