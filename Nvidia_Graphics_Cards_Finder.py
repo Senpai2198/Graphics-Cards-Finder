@@ -25,6 +25,10 @@ st.sidebar.write('Move the sliders to filter the list:')
 
 type_GPC = st.sidebar.selectbox('Select NVIDIA and/or AMD:', NvidiaorAMD, 0)
 
+year = st.checkbox('Sort Year')
+if year:
+        GPC=GPC.sort_values('Released Year')
+
 memory = st.sidebar.slider('Select Lowest Memory Size (in Gb):', 1,24,1)
     
 gpu=st.sidebar.slider('Select lowest GPU Clock (in MHz):', 675,2321,675)
