@@ -25,17 +25,17 @@ st.sidebar.write('Move the sliders to filter the list:')
 
 type_GPC = st.sidebar.selectbox('Select NVIDIA and/or AMD:', NvidiaorAMD, 0)
 
-year = st.sidebar.checkbox('Sort Year', help=help_year)
+year = st.sidebar.checkbox('Sort Year', st.help=help_year)
 if year:
         GPC=GPC.sort_values('Released Year')
 
-memory = st.sidebar.slider('Select Lowest Memory Size (in Gb):', 1,24,1, help=help_memory)
+memory = st.sidebar.slider('Select Lowest Memory Size (in Gb):', 1,24,1, st.help=help_memory)
     
-gpu=st.sidebar.slider('Select lowest GPU Clock (in MHz):', 675,2321,675, help=help_gpu)
+gpu=st.sidebar.slider('Select lowest GPU Clock (in MHz):', 675,2321,675, st.help=help_gpu)
       
-memory_c=st.sidebar.slider('Select Lowest Memory Clock (in MHz)', 900,2248, 900, help=help_memory_c)
+memory_c=st.sidebar.slider('Select Lowest Memory Clock (in MHz)', 900,2248, 900, st.help=help_memory_c)
      
-shaders=st.sidebar.slider('Select Lowest Shaders:', 192,10496,192,help=help_shaders)
+shaders=st.sidebar.slider('Select Lowest Shaders:', 192,10496,192, st.help=help_shaders)
 
 #########################################################################################
 
@@ -58,7 +58,7 @@ GPC = GPC[GPC['Shaders'] >= shaders]
 ########################################################################################
 
 if len(GPC.index)==0:
-    st.subheader('No Graphics Cards Found')
+    st.error('No Graphics Cards Found')
 else:
     st.table(GPC)
 
