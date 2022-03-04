@@ -6,6 +6,7 @@ GPC=pd.read_csv("Nvidia Graphics Cards.csv")
 GPC.reset_index(drop=True, inplace=True)
 GPC=GPC.sort_values('Released Year')
 NvidiaorAMD=['Both NVIDIA and AMD','NVIDIA','AMD']
+database_url="https://www.techpowerup.com/gpu-specs/"
 
 #########################################################################################
 st.write("""
@@ -17,7 +18,6 @@ st.text('')
 st.text('         It simple to use, just move the sliders in the sidebar and the graphics card list')
 st.text(' will be filtered.')
 st.text('')
-st.text('Database Source: https://www.techpowerup.com/gpu-specs/')
 
 ##########################################################################################    
 
@@ -59,5 +59,7 @@ if len(GPC.index)==0:
     st.subheader('No Graphics Cards Found')
 else:
     st.table(GPC)
+
+st.markdown('Database Source: [link](%s)' % database_url)
 
 #########################################################################################
