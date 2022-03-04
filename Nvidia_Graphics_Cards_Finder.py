@@ -10,7 +10,7 @@ st.write("""
          # GRAPHICS CARD LIST FILTER
          """)
 st.text('         The purpose of this application is to let user choose the specification they')
-st.text('require from a graphics either for their graphics intensive jobs or hobby.')
+st.text('require from a graphics card either for their graphics intensive jobs or hobby.')
 st.text('')
 st.text('         It simple to use, just move the sliders in the sidebar and the graphics card list')
 st.text(' will be filtered.')
