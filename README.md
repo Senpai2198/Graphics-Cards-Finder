@@ -8,3 +8,6 @@ It simple to use, just move the sliders in the sidebar and the graphics card lis
 will be filtered.
 
 Note: Only popular graphics cards from year 2010 are listed in this table!
+
+This project is done using **Python language** and the coding is written inside
+**Spyder software** available in the **Anaconda Navigator**.
