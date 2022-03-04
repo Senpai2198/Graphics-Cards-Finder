@@ -25,7 +25,7 @@ st.sidebar.write('Move the sliders to filter the list:')
 
 type_GPC = st.sidebar.selectbox('Select NVIDIA and/or AMD:', NvidiaorAMD, 0)
 
-year = st.checkbox('Sort Year')
+year = st.sidebar.checkbox('Sort Year')
 if year:
         GPC=GPC.sort_values('Released Year')
 
