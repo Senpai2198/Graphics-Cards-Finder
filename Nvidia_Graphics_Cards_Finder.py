@@ -9,11 +9,11 @@ nvidia=nvidia.sort_values('Released Year')
 st.write("""
          # GRAPHICS CARD LIST FILTER
          """)
-st.text('         The purpose of this application is to let user choose the specification they require from')
+st.text('         The purpose of this application is to let user choose the specification they')
 st.text('a graphics either for their graphics intensive jobs or hobby.')
-st.text('')
-st.text('         It simple to use, just move the sliders in the sidebar and the graphics card list will be filtered.')
-
+st.text('require from')
+st.text('         It simple to use, just move the sliders in the sidebar and the graphics card list')
+st.text(' will be filtered.')
 st.text('Database Source: https://www.techpowerup.com/gpu-specs/')
 
 ##########################################################################################    
