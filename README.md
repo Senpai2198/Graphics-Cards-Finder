@@ -18,7 +18,7 @@ from *object* to *int64*. Important since I cannot filter both *string* and *int
 removing an entire rows during the filter process.
 
 The .py and .csv files is then uploaded here, **GitHub**, for the next step, turning this coding into *a web application*. 
-[**Streamlit**](https://streamlit.io/) is an incredible tool for begginer like me to create an application. It
+[**Streamlit**](https://streamlit.io/) is an incredible tool for beginner like me to create an application. It
 really simple, it just require a GitHub account and a repository containing the project. Then register a **Streamlit** account
 and allow the site to access the **GitHub** account and create a new application by picking a repository containing the .py file and
 *voila*, an application is created!
