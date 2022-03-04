@@ -18,8 +18,12 @@ from *object* to *int64*. Important since I cannot filter both *string* and *int
 removing an entire rows during the filter process.
 
 The .py and .csv files is then uploaded here, **GitHub**, for the next step, turning this coding into *a web application*. 
-(**Streamlit**)[https://streamlit.io/] is an incredible tool for begginer like me to create an application. It
+[**Streamlit**](https://streamlit.io/) is an incredible tool for begginer like me to create an application. It
 really simple, it just require a GitHub account and a repository containing the project. Then register a **Streamlit** account
 and allow the site to access the **GitHub** account and create a new application by picking a repository containing the .py file and
 *voila*, an application is created!
 
+[The application can be found here](https://share.streamlit.io/senpai2198/graphics-cards-finder/main/Nvidia_Graphics_Cards_Finder.py).
+
+Thank you Dr. Yan Bin and Dr. Yong and the stuffs from **The Redbeat Academy** for training me during the MOHE training course to become
+the next **Data Analyst**.
