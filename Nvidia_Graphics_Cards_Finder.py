@@ -1,3 +1,4 @@
+```python
 import streamlit as st
 import pandas as pd
 ##########################################################################################
@@ -62,7 +63,7 @@ if len(GPC.index)==0:
 else:
     st.table(GPC)
 
-#st.markdown('Database Source ---> [TechPowerUp: GPU Specs Database](%s)' % database_url)
+st.markdown('Database Source ---> [TechPowerUp: GPU Specs Database](%s)' % database_url)
 
 st.image("https://www.gpumag.com/wp-content/uploads/2020/05/computer-graphics-card.jpg")
 
@@ -93,3 +94,4 @@ from adding an X-Ray view to adding cartoony outlines to rendering output.
 '''.strip()
 
 ###########################################################################################
+```
