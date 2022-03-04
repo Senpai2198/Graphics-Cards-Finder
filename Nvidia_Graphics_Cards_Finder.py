@@ -17,7 +17,7 @@ st.text('require from a graphics card either for their graphics intensive jobs, 
 st.text('or gaming in general.')
 st.text('         It simple to use, just move the sliders in the sidebar and the graphics card list')
 st.text(' will be filtered.')
-st.text('')
+st.text('Note: Only popular graphics cards from year 2010 are listed in this table!')
 
 ##########################################################################################    
 
