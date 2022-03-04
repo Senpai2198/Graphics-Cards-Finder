@@ -3,7 +3,7 @@ import pandas as pd
 ##########################################################################################
 
 GPC=pd.read_csv("Nvidia Graphics Cards.csv")
-GPC = GPC.reset_index(drop=True, inplace=True)
+#GPC.reset_index(drop=True, inplace=True)
 #GPC=GPC.sort_values('Released Year')
 NvidiaorAMD=['Both NVIDIA and AMD','NVIDIA','AMD']
 database_url="https://www.techpowerup.com/gpu-specs/"
@@ -59,5 +59,7 @@ else:
     st.table(GPC)
 
 st.markdown('Database Source ---> [TechPowerUp: GPU Specs Database](%s)' % database_url)
+
+GPC.reset_index(drop=True, inplace=True)
 
 #########################################################################################
