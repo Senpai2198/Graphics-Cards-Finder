@@ -60,6 +60,6 @@ if len(GPC.index)==0:
 else:
     st.table(GPC)
 
-st.markdown('Database Source: [link](%s)' % database_url)
+st.markdown('Database Source: [TechPowerUp](%s)' % database_url)
 
 #########################################################################################
