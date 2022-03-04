@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 ##########################################################################################
 
-nvidia=pd.read_csv("Nvidia Graphics Cards.csv")
-nvidia.reset_index(drop=True, inplace=True)
-nvidia=nvidia.sort_values('Released Year')
-NvidiaorAMD=['NVIDIA','AMD']
+GPC=pd.read_csv("Nvidia Graphics Cards.csv")
+GPC.reset_index(drop=True, inplace=True)
+GPC=GPC.sort_values('Released Year')
+NvidiaorAMD=['Both NVIDIA and AMD','NVIDIA','AMD']
 
 #########################################################################################
 st.write("""
@@ -38,24 +38,26 @@ shaders=st.sidebar.slider('Select Lowest Shaders:', 192,10496,192)
 #########################################################################################
 
 if type_GPC=='NVIDIA':
-         nvidia = nvidia[nvidia['Product Name'].str.contains('GeForce GTX')]
+         GPC = GPC[GPC['Product Name'].str.contains('GeForce GTX')]
+elif type_GPC=='AMD':
+         GPC = GPC[GPC['Product Name'].str.contains('Radeon RX')]
 else:
-         nvidia = nvidia[nvidia['Product Name'].str.contains('Radeon RX')]
+         GPC=GPC
 
-nvidia = nvidia[nvidia['Memory (Gb)'] >= memory] 
+GPC = GPC[GPC['Memory (Gb)'] >= memory] 
 
-nvidia = nvidia[nvidia['GPU clock (MHz)'] >= gpu] 
+GPC = GPC[GPC['GPU clock (MHz)'] >= gpu] 
 
-nvidia = nvidia[nvidia['Memory clock (MHz)'] >= memory_c] 
+GPC = GPC[GPC['Memory clock (MHz)'] >= memory_c] 
 
-nvidia = nvidia[nvidia['Shaders'] >= shaders] 
+GPC = GPC[GPC['Shaders'] >= shaders] 
 
 
 ########################################################################################
 
-if len(nvidia.index)==0:
+if len(GPC.index)==0:
     st.subheader('No Graphics Cards Found')
 else:
-    st.table(nvidia)
+    st.table(GPC)
 
 #########################################################################################
