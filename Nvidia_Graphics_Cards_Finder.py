@@ -62,7 +62,7 @@ GPC = GPC[GPC['Shaders'] >= shaders]
 if len(GPC.index)==0:
          st.error('No Graphics Cards Found')
 else:
-         st.table(GPC)
+         st.dataframe(GPC)
 
 st.markdown('Database Source ---> [TechPowerUp: GPU Specs Database](%s)' % database_url)
 
