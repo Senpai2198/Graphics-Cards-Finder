@@ -57,13 +57,15 @@ GPC = GPC[GPC['Shaders'] >= shaders]
 
 ########################################################################################
 
-if len(GPC.index)==0:
-    st.error('No Graphics Cards Found')
-else:
-    st.table(GPC)
+for i in range(101):
+         st.progress(i)
+         if len(GPC.index)==0:
+                  st.error('No Graphics Cards Found')
+         else:
+                  st.table(GPC)
 
 st.markdown('Database Source ---> [TechPowerUp: GPU Specs Database](%s)' % database_url)
 
-st.image("https://www.gpumag.com/wp-content/uploads/2020/05/computer-graphics-card.jpg")
+st.image("https://www.gpumag.com/wp-content/uploads/2020/05/AMD-and-NVIDIA-GPUs.jpg")
 
 #########################################################################################
