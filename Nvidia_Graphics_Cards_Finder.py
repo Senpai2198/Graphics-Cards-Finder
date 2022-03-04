@@ -28,11 +28,9 @@ type_GPC = st.sidebar.selectbox('Select NVIDIA and/or AMD:', NvidiaorAMD, 0)
 memory = st.sidebar.slider('Select Lowest Memory Size (in Gb):', 1,24,1)
     
 gpu=st.sidebar.slider('Select lowest GPU Clock (in MHz):', 675,2321,675)
-    
-    
+      
 memory_c=st.sidebar.slider('Select Lowest Memory Clock (in MHz)', 900,2248, 900)
-    
-    
+     
 shaders=st.sidebar.slider('Select Lowest Shaders:', 192,10496,192)
 
 #########################################################################################
