@@ -5,7 +5,9 @@ import pandas as pd
 nvidia=pd.read_csv("Nvidia Graphics Cards.csv")
 nvidia.reset_index(drop=True, inplace=True)
 nvidia=nvidia.sort_values('Released Year')
+NvidiaorAMD=['NVIDIA','AMD']
 
+#########################################################################################
 st.write("""
          # GRAPHICS CARD LIST FILTER
          """)
@@ -21,6 +23,8 @@ st.text('Database Source: https://www.techpowerup.com/gpu-specs/')
 
 st.sidebar.write('Move the sliders to filter the list:')
 
+type_GPC = st.sidebar.selectbox('Select NVIDIA or AMD:', NvidiaorAMD, 0)
+
 memory = st.sidebar.slider('Select Lowest Memory Size (in Gb):', 1,24,1)
     
 gpu=st.sidebar.slider('Select lowest GPU Clock (in MHz):', 675,2321,675)
@@ -32,6 +36,11 @@ memory_c=st.sidebar.slider('Select Lowest Memory Clock (in MHz)', 900,2248, 900)
 shaders=st.sidebar.slider('Select Lowest Shaders:', 192,10496,192)
 
 #########################################################################################
+
+if type_GPC=='NVIDIA':
+         nvidia = nvidia[nvidia['Product Name'] != 'GeForce GTX']
+else:
+         nvidia = nvidia[nvidia['Product Name'] != 'Radeon RX']
 
 nvidia = nvidia[nvidia['Memory (Gb)'] >= memory] 
 
