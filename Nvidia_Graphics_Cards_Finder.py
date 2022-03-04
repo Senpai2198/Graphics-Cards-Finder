@@ -23,7 +23,7 @@ st.text('')
 
 st.sidebar.write('Move the sliders to filter the list:')
 
-type_GPC = st.sidebar.selectbox('Select NVIDIA or AMD:', NvidiaorAMD, 0)
+type_GPC = st.sidebar.selectbox('Select NVIDIA and/or AMD:', NvidiaorAMD, 0)
 
 memory = st.sidebar.slider('Select Lowest Memory Size (in Gb):', 1,24,1)
     
