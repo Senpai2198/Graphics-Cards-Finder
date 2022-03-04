@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 ##########################################################################################
-#PC Components List
-#memory_size=(1, 2, 4, 6, 8, 10, 11, 12, 16, 24)
 
 nvidia=pd.read_csv("Nvidia Graphics Cards.csv")
 nvidia.reset_index(drop=True, inplace=True)
@@ -17,6 +15,7 @@ st.text('')
 st.text('         It simple to use, just move the sliders in the sidebar and the graphics card list will be filtered.')
 
 st.text('Database Source: https://www.techpowerup.com/gpu-specs/')
+
 ##########################################################################################    
 
 st.sidebar.write('Move the sliders to filter the list:')
@@ -43,10 +42,10 @@ nvidia = nvidia[nvidia['Shaders'] >= shaders]
 
 
 ########################################################################################
+
 if len(nvidia.index)==0:
     st.subheader('No Graphics Cards Found')
 else:
     st.table(nvidia)
+
 #########################################################################################
-bar=nvidia.plot.bar(x='Product Name', y='Memory (Gb)', rot=0)
-st.bar_chart(bar)
