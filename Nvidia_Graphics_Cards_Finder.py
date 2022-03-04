@@ -17,7 +17,7 @@ st.text('require from a graphics card either for their graphics intensive jobs, 
 st.text('or gaming in general.')
 st.text('         It simple to use, just move the sliders in the sidebar and the graphics card list')
 st.text(' will be filtered.')
-st.text('Note: Only popular graphics cards from year 2010 are listed in this table!')
+st.text('Note: Only recent popular graphics cards from year 2010 are listed in this table!')
 
 ##########################################################################################    
 
@@ -65,5 +65,6 @@ else:
 st.markdown('Database Source ---> [TechPowerUp: GPU Specs Database](%s)' % database_url)
 
 st.image("https://www.gpumag.com/wp-content/uploads/2020/05/AMD-and-NVIDIA-GPUs.jpg")
+st.caption("Image above shown two different brands of Graphics Cards. From left to right are NVIDIA's Geforce Series and AMD's Radeon.")
 
 #########################################################################################
