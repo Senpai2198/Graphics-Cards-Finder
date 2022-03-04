@@ -13,7 +13,7 @@ This project is done using **Python language** and the .py coding is written ins
 **Spyder software** available in the [**Anaconda Navigator**](https://www.anaconda.com/).
 
 The database source can be found [here](https://www.techpowerup.com/gpu-specs/). I have to tweak *a bit*
-the .csv file in the Excel to make sure the data is easy to read by the program and convert certain columns format
+the .csv file in the Excel to make sure the data is easy to read by the program and to convert certain columns format
 from *object* to *int64*. Important since I cannot filter both *string* and *integer* in a column without accidentally 
 removing an entire rows during the filter process.
 
