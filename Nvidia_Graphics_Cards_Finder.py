@@ -36,19 +36,19 @@ shaders=st.sidebar.slider('Select Lowest Shaders:', 192,10496,192)
 #########################################################################################
 
 if type_GPC=='NVIDIA':
-         GPC = GPC[GPC['Product Name'].str.contains('GeForce GTX')]
+         GPC[GPC['Product Name'].str.contains('GeForce GTX')]
 elif type_GPC=='AMD':
-         GPC = GPC[GPC['Product Name'].str.contains('Radeon RX')]
+         GPC[GPC['Product Name'].str.contains('Radeon RX')]
 else:
          GPC=GPC
 
-GPC = GPC[GPC['Memory (Gb)'] >= memory] 
+GPC[GPC['Memory (Gb)'] >= memory] 
 
-GPC = GPC[GPC['GPU clock (MHz)'] >= gpu] 
+GPC[GPC['GPU clock (MHz)'] >= gpu] 
 
-GPC = GPC[GPC['Memory clock (MHz)'] >= memory_c] 
+GPC[GPC['Memory clock (MHz)'] >= memory_c] 
 
-GPC = GPC[GPC['Shaders'] >= shaders] 
+GPC[GPC['Shaders'] >= shaders] 
 
 
 ########################################################################################
