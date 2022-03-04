@@ -14,6 +14,7 @@ st.text('require from a graphics either for their graphics intensive jobs or hob
 st.text('')
 st.text('         It simple to use, just move the sliders in the sidebar and the graphics card list')
 st.text(' will be filtered.')
+st.text('')
 st.text('Database Source: https://www.techpowerup.com/gpu-specs/')
 
 ##########################################################################################    
